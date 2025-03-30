@@ -19,7 +19,7 @@ def hangman():
         guess = input("Guess a letter: ").lower()
 
         if len(guess) != 1 or not guess.isalpha():
-            print("Invalid input. Enter a single letter.")
+            print("Invalid input! Enter a single letter.")
             continue
 
         if guess in guessed_letters:
@@ -33,7 +33,7 @@ def hangman():
             print("Wrong guess!")
 
         if set(word) <= guessed_letters:
-            print("\nCongratulations! You guessed the word: {word}")
+            print("\nCongratulations! You guessed the word correctly : {word}")
             return
 
     print("\nGame over! The word was: {word}")
